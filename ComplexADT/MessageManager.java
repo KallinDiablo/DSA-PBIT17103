@@ -1,6 +1,6 @@
+import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
-import java.util.LinkedList;
 
 public class MessageManager {
     private Queue<String> messageQueue;
@@ -32,12 +32,24 @@ public class MessageManager {
             System.out.println("Received message: " + messageStack.pop());
         }
     }
-    public static void main(String[] args) {
-        MessageManager messageManager = new MessageManager();
-    
-        messageManager.enqueueMessage("Hello, world!");
-        messageManager.enqueueMessage("This is a test message.");
-        messageManager.sendMessage();
-        messageManager.viewMessages();
+
+    // Algorithm 1: Check if there are any messages in the queue
+    public boolean hasMessages() {
+        return !messageQueue.isEmpty();
+    }
+
+    // Algorithm 2: Check if a message is in the queue
+    public boolean hasMessage(String message) {
+        return messageQueue.contains(message);
+    }
+
+    // Algorithm 3: Get the next message in the queue without removing it
+    public String peekMessage() {
+        return messageQueue.peek();
+    }
+
+    // Algorithm 4: Delete all messages in the queue
+    public void clearQueue() {
+        messageQueue.clear();
     }
 }
