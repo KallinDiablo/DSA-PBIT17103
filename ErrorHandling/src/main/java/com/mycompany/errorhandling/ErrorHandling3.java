@@ -4,20 +4,20 @@
  */
 package com.mycompany.errorhandling;
 
-import java.util.Scanner;
-
 /**
  *
  * @author hduc2
  */
-public class Main {
+public class ErrorHandling3 {
     public static void main(String[] args) {
-       try {
-        Scanner sc = new Scanner(System.in);
-        int n;
-        n = sc.nextInt();
-       } catch (Exception e) {
-        System.out.println(e.getMessage());
-       }
+        int a = 10;
+        int b = 0;
+        try {
+            int result = a / b;
+            System.out.println("Result: " + result);
+        } catch (ArithmeticException e) {
+            System.err.println("Caught ArithmeticException: " + e.getMessage());
+        }
     }
+    
 }
