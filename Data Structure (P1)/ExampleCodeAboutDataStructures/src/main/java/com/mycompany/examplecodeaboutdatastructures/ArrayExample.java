@@ -11,13 +11,10 @@ package com.mycompany.examplecodeaboutdatastructures;
 public class ArrayExample {
 
     public static void main(String[] args) {
-        Animal[] animals = new Animal[3];
-animals[0] = new Animal("lion", 10, "Africa");
-animals[1] = new Animal("tiger", 8, "Asia");
-animals[2] = new Animal("bear", 6, "North America");
-
-for (Animal animal : animals) {
-    System.out.println(animal);
-}
+        int[] arr = new int[5]; // Creates an integer array of size 5
+        arr[0] = 1; // Sets the first element of the array to 1
+        arr[1] = 2; // Sets the second element of the array to 2
+        arr[2] = 3; // Sets the third element of the array to 3
+        System.out.println(arr[1]); // Prints the value of the second element of the array (2)
     }
 }

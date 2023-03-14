@@ -4,23 +4,21 @@
  */
 package com.mycompany.examplecodeaboutdatastructures;
 
-
 /**
  *
  * @author hduc2
  */
 import java.util.LinkedList;
 import java.util.Queue;
+
 public class QueueExample {
 
     public static void main(String[] args) {
-        Queue<Animal> animals = new LinkedList<>();
-        animals.add(new Animal("lion", 10, "Africa"));
-        animals.add(new Animal("tiger", 8, "Asia"));
-        animals.add(new Animal("bear", 6, "North America"));
+        Queue<String> queue = new LinkedList<String>(); // Creates a new queue of strings using a linked list
+                                                        // implementation
+        queue.add("hello"); // Adds the string "hello" to the back of the queue
+        queue.add("world"); // Adds the string "world" to the back of the queue
+        System.out.println(queue.peek()); // Prints the first
 
-        while (!animals.isEmpty()) {
-            System.out.println(animals.remove());
-        }
     }
 }

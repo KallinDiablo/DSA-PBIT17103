@@ -13,13 +13,11 @@ import java.util.ArrayList;
 public class ArrayListExample {
 
     public static void main(String[] args) {
-        ArrayList<Animal> animals = new ArrayList<>();
-        animals.add(new Animal("lion", 10, "Africa"));
-        animals.add(new Animal("tiger", 8, "Asia"));
-        animals.add(new Animal("bear", 6, "North America"));
-
-        for (Animal animal : animals) {
-            System.out.println(animal);
-        }
+        ArrayList<String> list = new ArrayList<String>(); // Creates a new ArrayList of type String
+        list.add("hello"); // Adds the string "hello" to the end of the ArrayList
+        list.add("world"); // Adds the string "world" to the end of the ArrayList
+        System.out.println(list.get(0)); // Prints the first element of the ArrayList ("hello")
+        list.remove(1); // Removes the second element of the ArrayList ("world")
+        System.out.println(list.size()); // Prints the size of the ArrayList (1)
     }
 }
