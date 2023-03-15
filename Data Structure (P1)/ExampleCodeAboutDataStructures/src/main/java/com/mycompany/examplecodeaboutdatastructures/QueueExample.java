@@ -8,17 +8,18 @@ package com.mycompany.examplecodeaboutdatastructures;
  *
  * @author hduc2
  */
-import java.util.LinkedList;
-import java.util.Queue;
+import com.mycompany.examplecodeaboutdatastructures.ADT.MyQueue;
 
 public class QueueExample {
 
     public static void main(String[] args) {
-        Queue<String> queue = new LinkedList<String>(); // Creates a new queue of strings using a linked list
-                                                        // implementation
-        queue.add("hello"); // Adds the string "hello" to the back of the queue
-        queue.add("world"); // Adds the string "world" to the back of the queue
-        System.out.println(queue.peek()); // Prints the first
-
+        MyQueue<String> queue = new MyQueue<>();
+        queue.enqueue("Hello");
+        queue.enqueue("World");
+        System.out.println(queue.dequeue()); // prints "Hello"
+        System.out.println(queue.peek()); // prints "World"
+        System.out.println(queue.isEmpty()); // prints false
+        System.out.println(queue.size()); // prints 1
     }
+
 }

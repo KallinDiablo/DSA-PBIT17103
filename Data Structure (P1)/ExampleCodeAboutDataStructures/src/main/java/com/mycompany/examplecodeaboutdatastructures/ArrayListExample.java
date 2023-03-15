@@ -8,12 +8,12 @@ package com.mycompany.examplecodeaboutdatastructures;
  *
  * @author hduc2
  */
-import java.util.ArrayList;
+import com.mycompany.examplecodeaboutdatastructures.ADT.MyArrayList;
 
 public class ArrayListExample {
 
     public static void main(String[] args) {
-        ArrayList<String> list = new ArrayList<String>(); // Creates a new ArrayList of type String
+        MyArrayList<String> list = new MyArrayList<String>(); // Creates a new ArrayList of type String
         list.add("hello"); // Adds the string "hello" to the end of the ArrayList
         list.add("world"); // Adds the string "world" to the end of the ArrayList
         System.out.println(list.get(0)); // Prints the first element of the ArrayList ("hello")
