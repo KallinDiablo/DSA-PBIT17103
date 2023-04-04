@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.examplecodeaboutdatastructures.ADT;
+package com.mycompany.complexadt.ADT;
 
 /**
  *
@@ -13,20 +13,17 @@ import java.util.EmptyStackException;
 public class ArrayStack<E> {
     private E[] elements;
     private int size;
-
     @SuppressWarnings("unchecked")
     public ArrayStack() {
         elements = (E[]) new Object[10];
         size = 0;
     }
-
     public void push(E element) {
         if (size == elements.length) {
             resize(2 * elements.length);
         }
         elements[size++] = element;
     }
-
     public E pop() {
         if (isEmpty()) {
             throw new EmptyStackException();
@@ -38,22 +35,18 @@ public class ArrayStack<E> {
         }
         return element;
     }
-
     public E peek() {
         if (isEmpty()) {
             throw new EmptyStackException();
         }
         return elements[size - 1];
     }
-
     public boolean isEmpty() {
         return size == 0;
     }
-
     public int size() {
         return size;
     }
-
     private void resize(int capacity) {
         @SuppressWarnings("unchecked")
         E[] newElements = (E[]) new Object[capacity];
@@ -63,4 +56,3 @@ public class ArrayStack<E> {
         elements = newElements;
     }
 }
-

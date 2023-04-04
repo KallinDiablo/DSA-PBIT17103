@@ -16,7 +16,7 @@ public class Main {
         MessageManager manager = new MessageManager();
         Scanner scanner = new Scanner(System.in);
         int choice = 0;
-
+        
         do {
             System.out.println("Menu:");
             System.out.println("1. Enqueue message");
@@ -29,9 +29,14 @@ public class Main {
             System.out.println("8. Exit");
 
             System.out.print("Enter your choice: ");
-            choice = scanner.nextInt();
+            
+            
+            try {
+                choice = scanner.nextInt();
+            } catch (Exception e) {
+                System.out.println("Invalid DataTypes:" + e.getMessage());
+            }
             scanner.nextLine();
-
             switch (choice) {
                 case 1:
                     System.out.print("Enter message to enqueue: ");

@@ -4,21 +4,22 @@
  */
 package com.mycompany.complexadt;
 
+import com.mycompany.complexadt.ADT.ArrayStack;
+import com.mycompany.complexadt.ADT.MyQueue;
+
 /**
  *
  * @author hduc2
  */
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+
 
 public class MessageManager {
-    private Queue<String> messageQueue;
-    private Stack<String> messageStack;
+    private MyQueue<String> messageQueue;
+    private ArrayStack<String> messageStack;
 
     public MessageManager() {
-        messageQueue = new LinkedList<>();
-        messageStack = new Stack<>();
+        messageQueue = new MyQueue<>();
+        messageStack = new ArrayStack<>();
     }
 
     public void enqueueMessage(String message) {
